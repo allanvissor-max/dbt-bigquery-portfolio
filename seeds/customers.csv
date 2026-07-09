@@ -1,0 +1,5 @@
+customer_id,customer_name,country,risk_level,customer_since
+1,Anna Saar,Estonia,Low,2023-01-15
+2,Mati Kask,Estonia,Medium,2022-06-20
+3,John Smith,UK,High,2021-03-10
+4,Laura Tamm,Estonia,Low,2024-02-01

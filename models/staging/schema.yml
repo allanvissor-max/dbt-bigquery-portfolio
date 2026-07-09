@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Cleaned customer data from seed file.
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: Customer full name.
+        tests:
+          - not_null
+
+      - name: country
+        description: Customer country.
+
+      - name: risk_level
+        description: Customer risk level.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Low', 'Medium', 'High']
+
+      - name: customer_since_raw
+        description: Original customer since date value from source file.
+
+      - name: customer_since_date
+        description: Customer since date converted to DATE type.
+
+  - name: stg_transactions
+    description: Cleaned transaction data from seed file. Raw values are preserved for data quality analysis.
+    columns:
+      - name: transaction_id
+        description: Transaction identifier. Can be null in staging because source data may contain DQ issues.
+
+      - name: customer_id
+        description: Customer identifier linked to customer data.
+
+      - name: transaction_date_raw
+        description: Original transaction date value from source file.
+
+      - name: transaction_date
+        description: Transaction date converted to DATE type using safe_cast.
+
+      - name: amount_eur_raw
+        description: Original transaction amount value from source file.
+
+      - name: amount_eur
+        description: Transaction amount converted to numeric using safe_cast.
+
+      - name: transaction_type
+        description: Type of transaction.

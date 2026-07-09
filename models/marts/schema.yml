@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: mart_customer_transactions
+    description: Customer-level transaction summary for analytics.
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: Customer full name.
+
+      - name: country
+        description: Customer country.
+
+      - name: risk_level
+        description: Customer risk level.
+
+      - name: customer_since_date
+        description: Date when customer relationship started.
+
+      - name: transaction_count
+        description: Number of valid transactions linked to the customer.
+        tests:
+          - not_null
+
+      - name: total_amount_eur
+        description: Total transaction amount in EUR.
+        tests:
+          - not_null
+
+      - name: avg_transaction_amount_eur
+        description: Average transaction amount in EUR.
+
+      - name: customer_value_segment
+        description: Customer value segment based on total transaction amount.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['High value customer', 'Medium value customer', 'Low value customer']
