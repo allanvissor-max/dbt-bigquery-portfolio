@@ -1,15 +1,15 @@
-Welcome to your new dbt project!
+## Project overview
 
-### Using the starter project
+This project demonstrates a dbt analytics engineering workflow on BigQuery.
 
-Try running the following commands:
-- dbt run
-- dbt test
+Data flow:
 
+seeds → staging → marts → quality
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Key features
+
+- CSV seed data loaded into BigQuery
+- staging models for cleaning and type casting
+- customer-level transaction mart
+- data quality model for detecting invalid records
+- dbt schema tests and documentation
