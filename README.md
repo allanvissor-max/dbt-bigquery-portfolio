@@ -17,7 +17,8 @@ dbt staging models
     ↓
 analytical marts
     ↓
-data quality issue detection layer```
+data quality issue detection layer
+```
 
 ## The project includes:
 
