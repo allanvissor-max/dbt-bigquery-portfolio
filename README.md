@@ -126,7 +126,20 @@ This project demonstrates practical knowledge of:
 - staging and mart modelling
 - building reporting-ready analytical marts
 - BI and reporting layer design
+- BigQuery conversational agent setup
 - data quality checks and issue detection
 - schema testing
 - GitHub version control
 - data pipeline thinking
+
+## How to run
+
+## How to Run
+
+### 1. Run the full dbt workflow
+
+```bash
+dbt seed --full-refresh
+dbt build
+dbt docs generate
+```
