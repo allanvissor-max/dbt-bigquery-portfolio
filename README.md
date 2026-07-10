@@ -40,9 +40,9 @@ seeds/customers.csv
 seeds/transactions.csv
 ```
 These files are loaded into BigQuery using:
-
+```
 dbt seed --full-refresh
-
+```
 The seed files simulate raw source data.
 
 2. Staging Layer
@@ -112,3 +112,17 @@ invalid transaction types
 high-value transactions requiring review
 
 This separates analytical reporting from data quality monitoring.
+
+## What This Project Demonstrates
+
+This project demonstrates practical knowledge of:
+
+analytics engineering
+dbt project structure
+BigQuery as a cloud data warehouse
+SQL transformations
+staging and mart modelling
+data quality checks
+schema testing
+GitHub version control
+basic data pipeline thinking
