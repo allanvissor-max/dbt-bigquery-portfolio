@@ -71,7 +71,6 @@ The marts layer creates business-friendly analytical tables.
 ```
 models/marts/mart_customer_transactions.sql
 models/marts/mart_monthly_transaction_summary.sql
-mart_customer_transactions
 ```
 Customer-level transaction summary including:
 
