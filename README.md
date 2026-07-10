@@ -22,13 +22,13 @@ data quality issue detection layer
 
 ## The project includes:
 
-sample customer and transaction data
-dbt seed files loaded into BigQuery
-staging models for cleaning and type casting
-analytical marts for customer and monthly transaction analysis
-schema tests and documentation
-a dedicated data quality model for identifying problematic records
-GitHub version control
+- sample customer and transaction data
+- dbt seed files loaded into BigQuery
+- staging models for cleaning and type casting
+- analytical marts for customer and monthly transaction analysis
+- schema tests and documentation
+- a dedicated data quality model for identifying problematic records
+- GitHub version control
 
 ## Data Flow
 ### 1. Seed Data
@@ -54,10 +54,10 @@ models/staging/stg_transactions.sql
 ```
 The staging layer performs:
 
-trimming of text fields
-conversion of empty strings to NULL
-safe casting of dates and numeric values
-preservation of raw values for auditability
+- trimming of text fields
+- conversion of empty strings to NULL
+- safe casting of dates and numeric values
+- preservation of raw values for auditability
 
 Example logic:
 ```
@@ -75,19 +75,19 @@ mart_customer_transactions
 ```
 Customer-level transaction summary including:
 
-transaction count
-total transaction amount
-average transaction amount
-customer value segment
-mart_monthly_transaction_summary
+- transaction count
+- total transaction amount
+- average transaction amount
+- customer value segment
+- mart_monthly_transaction_summary
 
 Monthly transaction summary by transaction type including:
 
-transaction month
-transaction type
-transaction count
-total transaction amount
-average transaction amount
+- transaction month
+- transaction type
+- transaction count
+- total transaction amount
+- average transaction amount
 
 The marts use only valid transactions, while invalid records are handled separately in the data quality layer.
 
@@ -99,17 +99,17 @@ models/quality/dq_transaction_issues.sql
 ```
 It detects:
 
-missing transaction IDs
-duplicate transaction IDs
-missing customer IDs
-orphan customer references
-missing transaction dates
-invalid transaction dates
-missing amounts
-negative amounts
-zero amounts
-invalid transaction types
-high-value transactions requiring review
+- missing transaction IDs
+- duplicate transaction IDs
+- missing customer IDs
+- orphan customer references
+- missing transaction dates
+- invalid transaction dates
+- missing amounts
+- negative amounts
+- zero amounts
+- invalid transaction types
+- high-value transactions requiring review
 
 This separates analytical reporting from data quality monitoring.
 
@@ -117,12 +117,12 @@ This separates analytical reporting from data quality monitoring.
 
 This project demonstrates practical knowledge of:
 
--analytics engineering
--dbt project structure
--BigQuery as a cloud data warehouse
--SQL transformations
--staging and mart modelling
--data quality checks
--schema testing
--GitHub version control
--basic data pipeline thinking
+- analytics engineering
+- dbt project structure
+- BigQuery as a cloud data warehouse
+- SQL transformations
+- staging and mart modelling
+- data quality checks
+- schema testing
+- GitHub version control
+- basic data pipeline thinking
