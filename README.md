@@ -132,11 +132,7 @@ This project demonstrates practical knowledge of:
 - GitHub version control
 - data pipeline thinking
 
-## How to run
-
-## How to Run
-
-### 1. Run the full dbt workflow
+## How to run the full dbt workflow
 
 ```bash
 dbt seed --full-refresh
