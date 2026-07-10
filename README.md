@@ -31,7 +31,7 @@ a dedicated data quality model for identifying problematic records
 GitHub version control
 
 ## Data Flow
-1. Seed Data
+### 1. Seed Data
 
 The project starts with two CSV files:
 
@@ -45,7 +45,7 @@ dbt seed --full-refresh
 ```
 The seed files simulate raw source data.
 
-2. Staging Layer
+### 2. Staging Layer
 
 The staging models clean and standardise the raw data.
 ```
@@ -65,7 +65,7 @@ safe_cast(nullif(trim(transaction_date), '') as date) as transaction_date
 ```
 This ensures that invalid dates do not break the pipeline. Instead, they are converted to NULL and captured later in the data quality layer.
 
-3. Analytical Marts
+### 3. Analytical Marts
 
 The marts layer creates business-friendly analytical tables.
 ```
@@ -91,7 +91,7 @@ average transaction amount
 
 The marts use only valid transactions, while invalid records are handled separately in the data quality layer.
 
-4. Data Quality Layer
+### 4. Data Quality Layer
 
 The model below identifies transaction records with data quality issues:
 ```
@@ -117,12 +117,12 @@ This separates analytical reporting from data quality monitoring.
 
 This project demonstrates practical knowledge of:
 
-analytics engineering
-dbt project structure
-BigQuery as a cloud data warehouse
-SQL transformations
-staging and mart modelling
-data quality checks
-schema testing
-GitHub version control
-basic data pipeline thinking
+-analytics engineering
+-dbt project structure
+-BigQuery as a cloud data warehouse
+-SQL transformations
+-staging and mart modelling
+-data quality checks
+-schema testing
+-GitHub version control
+-basic data pipeline thinking
