@@ -124,7 +124,9 @@ This project demonstrates practical knowledge of:
 - BigQuery as a cloud data warehouse
 - SQL transformations
 - staging and mart modelling
-- data quality checks
+- building reporting-ready analytical marts
+- BI and reporting layer design
+- data quality checks and issue detection
 - schema testing
 - GitHub version control
-- basic data pipeline thinking
+- data pipeline thinking
