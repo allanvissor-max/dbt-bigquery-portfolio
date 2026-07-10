@@ -135,7 +135,7 @@ This project demonstrates practical knowledge of:
 ## How to run the full dbt workflow
 
 ```bash
-dbt seed --full-refresh
+dbt seed
 dbt build
 dbt docs generate
 ```
