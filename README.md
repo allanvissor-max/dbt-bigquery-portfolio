@@ -35,7 +35,8 @@ GitHub version control
 
 The project starts with two CSV files:
 
-```seeds/customers.csv
+```
+seeds/customers.csv
 seeds/transactions.csv
 ```
 These files are loaded into BigQuery using:
