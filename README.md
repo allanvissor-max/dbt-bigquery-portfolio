@@ -1,15 +1,20 @@
-## Project overview
+# dbt + BigQuery Analytics Engineering Portfolio Project
 
-This project demonstrates a dbt analytics engineering workflow on BigQuery.
+## Overview
 
-Data flow:
+This is a small analytics engineering portfolio project built with **dbt**, **BigQuery** and **GitHub**.
 
-seeds → staging → marts → quality
+The project demonstrates how raw transaction and customer data can be loaded, cleaned, transformed, tested and monitored for data quality issues.
 
-## Key features
+The goal is to show a realistic data workflow:
 
-- CSV seed data loaded into BigQuery
-- staging models for cleaning and type casting
-- customer-level transaction mart
-- data quality model for detecting invalid records
-- dbt schema tests and documentation
+```text
+CSV seed data
+    ↓
+BigQuery raw tables
+    ↓
+dbt staging models
+    ↓
+analytical marts
+    ↓
+data quality issue detection layer
