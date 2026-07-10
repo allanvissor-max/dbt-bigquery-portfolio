@@ -4,9 +4,9 @@
 
 This is a small analytics engineering portfolio project built with **dbt**, **BigQuery** and **GitHub**.
 
-The project demonstrates how raw transaction and customer data can be loaded, cleaned, transformed, tested and monitored for data quality issues.
+The project demonstrates an end-to-end analytics engineering workflow where raw customer and transaction data is loaded into BigQuery, cleaned and transformed with dbt, tested, and prepared into reporting-ready analytical marts, while a separate data quality layer captures duplicates, missing keys, invalid dates and other problematic records.
 
-The goal is to show a realistic data workflow:
+Data workflow:
 
 ```text
 CSV seed data
@@ -15,9 +15,12 @@ BigQuery raw tables
     ↓
 dbt staging models
     ↓
-analytical marts
-    ↓
-data quality issue detection layer
+    ├── analytical marts
+    │       ├── mart_customer_transactions
+    │       └── mart_monthly_transaction_summary
+    │
+    └── data quality issue detection layer
+            └── dq_transaction_issues
 ```
 
 ## The project includes:
