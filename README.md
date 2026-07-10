@@ -139,3 +139,15 @@ dbt seed
 dbt build
 dbt docs generate
 ```
+## How BigQuery Is Used
+
+BigQuery is used as the cloud data warehouse for this project.
+
+The dbt project connects to BigQuery through a dbt Cloud environment. The actual BigQuery credentials and connection settings are managed securely in dbt Cloud and are not stored in this GitHub repository.
+
+When the project is run, dbt executes SQL models against BigQuery and creates the following tables/views in the target BigQuery dataset:
+
+```text
+BigQuery project: alien-lattice-501815-p1
+BigQuery dataset: dbt_avissor
+```
