@@ -126,7 +126,7 @@ If a test fails, dbt reports that the corresponding data quality rule has been v
 
 The project also includes SQL models that identify and expose individual problematic records.
 
-For example, the `dq_transaction_issues` model stores records with issues such as:
+The `dq_transaction_issues` model stores records with issues such as:
 
 - missing transaction IDs
 - duplicate transaction IDs
