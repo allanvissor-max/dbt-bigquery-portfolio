@@ -1,4 +1,4 @@
-# dbt + BigQuery Analytics Engineering Portfolio Project
+# dbt Cloud + BigQuery Analytics Engineering Portfolio Project
 
 ## Overview
 
