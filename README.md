@@ -95,11 +95,40 @@ The marts use only valid transactions, while invalid records are handled separat
 
 ### 4. Data Quality Layer
 
-The model below identifies transaction records with data quality issues:
+## Data Quality
+
+Data quality is implemented in two complementary ways:
+
+### YAML-based dbt tests
+
+Data quality rules are defined in the project’s `.yml` files using dbt schema tests.
+
+These tests validate important model and column-level requirements, such as:
+
+* required fields using `not_null`
+* unique identifiers using `unique`
+* allowed values using `accepted_values`
+* valid references between models using `relationships`
+
+The tests are executed with:
+
+```bash
+dbt test
 ```
-models/quality/dq_transaction_issues.sql
+
+or as part of:
+
+```bash
+dbt build
 ```
-It detects:
+
+If a test fails, dbt reports that the corresponding data quality rule has been violated.
+
+### SQL-based data quality models
+
+The project also includes SQL models that identify and expose individual problematic records.
+
+For example, the `dq_transaction_issues` model stores records with issues such as:
 
 - missing transaction IDs
 - duplicate transaction IDs
@@ -113,7 +142,17 @@ It detects:
 - invalid transaction types
 - high-value transactions requiring review
 
-This separates analytical reporting from data quality monitoring.
+This provides two levels of data quality control:
+
+```text
+YAML tests
+→ validate whether models meet defined data quality requirements
+
+SQL data quality models
+→ identify and expose the specific records that require investigation
+```
+
+Together, these approaches provide both automated validation and detailed visibility into data quality issues.
 
 ## What This Project Demonstrates
 
