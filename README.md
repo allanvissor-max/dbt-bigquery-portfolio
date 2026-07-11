@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a small analytics engineering portfolio project built with **dbt**, **BigQuery** and **GitHub**.
+This is a small analytics engineering portfolio project built with **dbt Cloud**, **BigQuery** and **GitHub**.
 
 The project demonstrates an end-to-end analytics engineering workflow where raw customer and transaction data is loaded into BigQuery, cleaned and transformed with dbt, tested, and prepared into reporting-ready analytical marts, while a separate data quality layer captures duplicates, missing keys, invalid dates and other problematic records.
 
