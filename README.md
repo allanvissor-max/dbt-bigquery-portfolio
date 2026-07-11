@@ -95,11 +95,9 @@ The marts use only valid transactions, while invalid records are handled separat
 
 ### 4. Data Quality Layer
 
-## Data Quality
-
 Data quality is implemented in two complementary ways:
 
-### YAML-based dbt tests
+#### YAML-based dbt tests
 
 Data quality rules are defined in the project’s `.yml` files using dbt schema tests.
 
@@ -124,7 +122,7 @@ dbt build
 
 If a test fails, dbt reports that the corresponding data quality rule has been violated.
 
-### SQL-based data quality models
+#### SQL-based data quality models
 
 The project also includes SQL models that identify and expose individual problematic records.
 
