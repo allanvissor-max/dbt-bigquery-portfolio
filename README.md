@@ -22,9 +22,9 @@ dbt staging models
     └── data quality issue detection layer
             └── dq_transaction_issues
                 ↓
-        BigQuery Conversational Agent
+        BigQuery Conversational AI Agent
                 ↓
-    Natural-language analytics and data quality insights
+    Natural-language analytics and data quality insights on the data
 ```
 
 ## The project includes:
